@@ -1,0 +1,6 @@
+#!/bin/sh
+find -L data/ \
+	-type f \
+	-name '*.sam' \
+| sed -e 's#data/#results/noheader/#g' \
+	-e 's#\.sam#.noheader.sorted.sam#g'
